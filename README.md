@@ -79,16 +79,12 @@ pytest -q tests/unit/test_model.py
 
 ## CD (Continuous Deployment):
 **Trigger**: Runs automatically after successful CI on the main branch.
-**Steps**: 
+ - **Steps**: 
    - Build Docker Image: Packages your project into a Docker image.
    - Push Image to Registry: Uploads the image to Docker Hub.
 
-
- - every push
- - every pull request
- - 
-Workflow file: `.github/workflows/tests.yml`
-               `.github/workflows/ci.yml`
+Workflow file: `.github/workflows/ci.yml`
+               `.github/workflows/cd.yml`
 
 
 
