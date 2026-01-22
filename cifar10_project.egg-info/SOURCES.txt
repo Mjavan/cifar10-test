@@ -1,0 +1,15 @@
+pyproject.toml
+cifar10_project.egg-info/PKG-INFO
+cifar10_project.egg-info/SOURCES.txt
+cifar10_project.egg-info/dependency_links.txt
+cifar10_project.egg-info/top_level.txt
+src/__init__.py
+src/data.py
+src/infer.py
+src/main_train.py
+src/model.py
+src/train.py
+src/utils.py
+tests/test_cifar10_data_contract.py
+tests/test_dataloader_contract.py
+tests/test_model_forward.py
