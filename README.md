@@ -1,10 +1,11 @@
-# CIFAR-10 Classification with Testing (Unit / Integration / Regression) + CI
+# CIFAR-10 Classification with Testing (Unit / Integration / Regression) + CI/CD Pipeline
 
-This repository is a small end-to-end PyTorch project for CIFAR-10-style image classification, designed to demonstrate **professional testing practices for ML code**:
+This repository is an end-to-end PyTorch project for CIFAR-10-style image classification, designed to demonstrate **professional testing practices for ML code**:
 - **Unit tests** for individual components (data, model, utils, inference, training step)
 - **Integration tests** that validate modules work together (pipeline smoke tests)
 - **Regression (snapshot) tests** that detect unintended behavior changes
 - **CI (GitHub Actions)** that runs tests automatically on every push / pull request
+- **CD (Github Actions)** that 
 
 > Goal: show how to test ML code *reliably* without flaky “accuracy threshold” tests.
 
@@ -65,7 +66,24 @@ pytest -q
 pytest -q tests/unit/test_model.py
 ```
 ## CI (Continuous Integration)
-A GitHub Actions workflow runs `pytest` automatically on:
+**Trigger**: Runs on every push or pull request to the main branch.
+ - Steps:
+
+   - Checkout: Retrieves the latest code.
+
+   - Setup: Installs dependencies required for building and testing.
+
+   - Build: Compiles or prepares the application.
+
+   - Test: Runs automated tests to verify that the code works as expected.
+
+## CD (Continuous Deployment):
+**Trigger**: Runs automatically after successful CI on the main branch.
+**Steps**: 
+   - Build Docker Image: Packages your project into a Docker image.
+   - Push Image to Registry: Uploads the image to Docker Hub.
+
+
  - every push
  - every pull request
  - 
